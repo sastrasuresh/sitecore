@@ -1,10 +1,5 @@
 # Starter pipeline
-- task: AzureKeyVault@1
-  inputs:
-    azureSubscription: 'cloudaspirants(2824225c-b9bf-480e-aee4-0ca54bf2802f)'
-    KeyVaultName: 'KEY-VAULT0101'
-    SecretsFilter: '*'
-    RunAsPreJob: true
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -25,3 +20,10 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: AzureKeyVault@1
+  inputs:
+    azureSubscription: 'cloudaspirants(2824225c-b9bf-480e-aee4-0ca54bf2802f)'
+    KeyVaultName: 'KEY-VAULT0101'
+    SecretsFilter: '*'
+    RunAsPreJob: true
