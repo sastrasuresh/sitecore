@@ -1,0 +1,2 @@
+# sitecore
+About Sitecore devops
